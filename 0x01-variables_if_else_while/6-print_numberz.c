@@ -3,9 +3,8 @@
 #include <time.h>
 
 /**
- * main - entering digits 
- *
- * Return: just 0 (sucess)
+ * main - entering digits
+ * Return: just 0(success)
  */
 int main(void)
 {
