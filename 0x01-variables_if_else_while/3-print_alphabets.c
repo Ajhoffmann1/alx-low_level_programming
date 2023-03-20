@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - entering point 
+ * main - entering point
  * Return: just 0 (success)
  */
 
