@@ -2,7 +2,7 @@
 
 /**
  * main -Entry point
- * description: Write a program that prints all possible 
+ * description: Write program that prints all possible 
  * different combinations of two digits
  * Return: 0
  */
@@ -10,7 +10,7 @@ int main(void)
 {
 	int firstdigit = 0, seconddigit;
 
-	while (firstgigit <= 99)
+	while (firstdigit <= 99)
 	{
 		secondigit = firstdigit;
 		while (seconddigit <= 99)

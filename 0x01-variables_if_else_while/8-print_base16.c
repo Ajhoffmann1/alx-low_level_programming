@@ -4,15 +4,14 @@
 
 /**
  * main - entering point 
- *
  * Return: just 0(success)
  */
 int main(void)
 {
-	int d;
+	int r;
 	char low;
 
-	for (d = '0';  d <= 'f'; d++)
+	for (r = '0';  r <= 'f'; d++)
 	purchar(d);
 
 	for (low = 'a'; low <= 'f'; low++)

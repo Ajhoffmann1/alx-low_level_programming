@@ -3,8 +3,7 @@
 #include <time.h>
 
 /**
- * main - entering poing 
- *
+ * main - entering point 
  * Return: just 0(success)
  */
 int main(void)
@@ -13,12 +12,12 @@ int main(void)
 
 	for (d = '0'; d <= '9'; d++)
 	{
-		putchar(d);
-		if (d != '9')
-		{
-			putchar(' ');
-			putchar(' ');
-		}
+	putchar(d);
+	if (d != '9')
+	{
+	putchar(',');
+	putchar(' ');
+	}
 	}
 	putchar('\n');
 	return (0);

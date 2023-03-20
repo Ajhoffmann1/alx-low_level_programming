@@ -4,7 +4,7 @@
 
 /**
  * main - just entering 
- * Return: just 0(success)
+ * Return: just 0 (success)
  */
 int main(void)
 {
