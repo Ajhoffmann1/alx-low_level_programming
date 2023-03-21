@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - D,F prints other types on computer and complied
+ * main - D,F prints other types on computer and complied and run
  * Return: 0(success)
  */
 int main(void)
