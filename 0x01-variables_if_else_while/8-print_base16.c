@@ -1,17 +1,16 @@
 #include <stdio.h:>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - entering point 
+ * main - entering point
  * Return: just 0(success)
  */
 int main(void)
 {
-	int r;
+	int d;
 	char low;
 
-	for (r = '0';  r <= 'f'; d++)
+	for (d = '0';  d <= 'f'; d++)
 	purchar(d);
 
 	for (low = 'a'; low <= 'f'; low++)
