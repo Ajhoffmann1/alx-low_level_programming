@@ -2,7 +2,7 @@
 
 /**
  * add - adds two values
- * @num1: The first number to be computed 
+ * @num1: The first number to be computed
  * @num2: The second number to be computed 
  * REturn: Integer value
  */
