@@ -3,8 +3,8 @@
 /**
  * add - adds two values
  * @num1: The first number to be computed
- * @num2: The second number to be computed 
- * REturn: Integer value
+ * @num2: The second number to be computes
+ * Return: Integer value
  */
 int add(int num1, int num2)
 
