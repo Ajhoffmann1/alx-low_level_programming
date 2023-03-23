@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_line - Draw straight line according to parameter
- * @n: The of lines to draw
- * retur: empty
+ * print_diagonal - Draws diagonal lines according parameter
+ * @n: The number of times to print diagonal lines
+ * Return: empty
  */
 
-void print_line(int n)
+void print_diagonal(int n)
 {
-	int y;
+	int x, y;
 
 	if (n <= 0)
 	{
@@ -16,10 +16,14 @@ void print_line(int n)
 	}
 	else
 	{
-		for (y = 0; y < n; y++)
+		for (x = 0; x < n; x++)
 		{
-			_putchar(95);
+			for (y = 0; y < x; y++)
+			{
+				_putchar(32);
+			}
+			_putchar(92);
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
