@@ -12,7 +12,7 @@ void print_buffer(char *b, int size)
 {
 	int l, e, o;
 
-	o = 0;
+	l = 0;
 
 	if (size <= 0)
 	{
