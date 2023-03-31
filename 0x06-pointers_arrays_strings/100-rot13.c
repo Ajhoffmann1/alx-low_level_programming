@@ -17,14 +17,13 @@ char *rot13(char *s)
 	for (f = 0; s[f] != '\0'; f++)
 	{
 		for (h = 0; h < 52; h++)
+	{
+		if (s[f] == datal[h])
 		{
-			if (s[f] == datal[h])
-			{
-				s[f] = datarot[h];
-
-				break;
-			}
+			s[f] = datarot[h];
+			break;
 		}
+	}
 	}
 	return (s);
 }
