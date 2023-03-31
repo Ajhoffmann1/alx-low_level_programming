@@ -1,4 +1,4 @@
-#include " main.h"
+#include "main.h"
 
 /**
  * _strncpy - Copies the most an inutted number
