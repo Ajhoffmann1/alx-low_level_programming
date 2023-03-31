@@ -1,7 +1,7 @@
 #include " main.h"
 
 /**
- * _strncpy - Copy the most an inutted number
+ * _strncpy - Copies the most an inutted number
  * of bytes from string src into dest
  * @dest: The buffer storing the string
  * @src: The source string
