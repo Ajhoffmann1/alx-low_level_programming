@@ -6,8 +6,8 @@
  * make change for an amount of money.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the argument
- * Return: if the number of argument is not exactly one -1
- * else -0.
+ * Return: if the number of argument is not exactly one - 1
+ * else - 0.
  */
 
 int main(int argc, char *argv[])
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf ("Error\n");
+		printf("Error\n");
 		return (1);
 	}
 	cents = atoi(argv[1]);
@@ -30,6 +30,16 @@ int main(int argc, char *argv[])
 			continue;
 		}
 		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
 		{
 			cents -= 2;
 			continue;
