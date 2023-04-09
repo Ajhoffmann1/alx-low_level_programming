@@ -1,41 +1,41 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * main - prints the sum of args positive numbers
- * @argc: argument count
- * @argv: argument vector
- * Return: just zero
+ * main - prints the minimum number of coins to
+ * make change for an amount of money.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the argument
+ * Return: if the number of argument is not exactly one -1
+ * else -0.
  */
 
 int main(int argc, char *argv[])
 {
-	int k;
-	unsigned int z, sum = 0;
-	char *e;
+	int cents, coins = 0;
 
-	if (argc > 1)
+	if (argc != 2)
 	{
-		for (k = 1; k < argc; k++)
+		printf ("Error\n");
+		return (1);
+	}
+	cents = atoi(argv[1]);
+
+	while (cents > 0)
+	{
+		coins++;
+		if ((cents - 25) >= 0)
 		{
-			e = argv[k];
-			for (z = 0; z < strlen(e); z++)
-			{
-				if (e[z] < 48 || e[z] > 57)
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
-			e++;
+			cents -= 25;
+			continue;
 		}
-		printf("%d\n", sum);
+		if ((cents - 10) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
 	}
-	else
-	{
-		printf("0\n");
-	}
+	printf("%d\n", coins);
 	return (0);
 }
