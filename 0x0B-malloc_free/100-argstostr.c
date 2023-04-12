@@ -28,13 +28,13 @@ char *argstostr(int ac, char **av)
 	}
 	v = malloc((sizeof(char) * yy) + ac + 1);
 	l = 0;
-	while (av[l][e])
+	while(av[l])
 	{
 		while (av[l][e])
 		{
 			v[o] = av[l][e];
 			o++;
-			e++;
+			l++;
 		}
 		v[o] = '\n';
 		e = 0;
