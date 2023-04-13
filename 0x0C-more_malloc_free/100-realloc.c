@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _realiloc - ...
+ * _realloc - ...
  * @ptr: ...
  * @old_size: ...
  * @new_size: ...
@@ -37,7 +37,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	for (k = 0; k < old_size && k < new_size; k++)
 	{
-		pptr[k] = ((char *) ptr) [k];
+		pptr[k] = ((char *) ptr)[k];
 	}
 	free(ptr);
 	return (pptr);
