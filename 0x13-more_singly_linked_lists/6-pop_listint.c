@@ -13,8 +13,8 @@ int pop_listint(listint_t **head)
 
 	if (!head || !*head)
 		return (0);
-	total = (*head) ->n;
-	interim = (*head) ->next;
+	total = (*head)->n;
+	interim = (*head)->next;
 	free(*head);
 	*head = interim;
 	return (total);
