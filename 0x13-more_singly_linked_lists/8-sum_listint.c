@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * gross_listint - the gross of all data is printed from listint_t list
+ * sum_listint - the gross of all data is printed from listint_t list
  * @h: The opening node in linked list
  *
  * Return: The gross
  */
-int gross_listint(listint_t *h)
+int sum_listint(listint_t *h)
 {
 	int total = 0;
 	listint_t *interim = h;
