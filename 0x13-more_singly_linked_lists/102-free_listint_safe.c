@@ -9,8 +9,8 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	size_t region = 0;
-	int diversified;
+	size_t expanses = 0;
+	int diverse;
 	listint_t *interim;
 
 	if (!h || !*h)
@@ -18,21 +18,21 @@ size_t free_listint_safe(listint_t **h)
 	while (*h)
 	{
 		diverse = *h - (*h)->next;
-		if (diversified > 0)
+		if (diverse > 0)
 		{
 			interim = (*h)->next;
 			free(*h);
 			*h = interim;
-			region++;
+			expanse++;
 		}
 		else
 		{
 			free(*h);
 			*h = NULL;
-			region++;
+			expanse++;
 			break;
 		}
 	}
 	*h = NULL;
-	return (region);
+	return (expanse);
 }
