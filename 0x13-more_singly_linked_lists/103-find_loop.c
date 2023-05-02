@@ -3,30 +3,30 @@
 
 /**
  * find_listint_loop - detected loop in the list
- * @h: the linked list has a pointer
+ * @head: the linked list has a pointer
  * Return: the address of the nodes where the loop start or NULL
  */
 
-listint_t *find_listint_loop(listint_t *h)
+listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *steady = h;
-	listint_t *speedy = h;
+	listint_t *low = head;
+	listint_t *fast = head;
 
 	if (!head)
 		return (NULL);
-	while (steady && speedy && speedy->next)
+	while (low && fast && fast->next)
 	{
-		speedy = speedy->next->next;
-		steady = speady->next;
-		if (speedy == steady)
+		fast = fast->next->next;
+		low = low->next;
+		if (fast == low)
 		{
-			steady = h;
-			while (steady != speedy)
+			low = head;
+			while (low != fast)
 			{
-				steady = steady->next;
-				speedy = speedy->next;
+				low = low->next;
+				fast = fast->next;
 			}
-			return (speedy);
+			return (fast);
 		}
 	}
 	return (NULL);
