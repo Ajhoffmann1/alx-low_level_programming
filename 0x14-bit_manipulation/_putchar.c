@@ -1,11 +1,11 @@
 #include "main.h"
 #include <unistd.h>
-
 /**
- * _putchar - the file description takes the charater c
- * @c: the inscribed charater
- * Return: just success 1.
- * maybe errors, -1 is returned, and error is set earlier on'
+ * _putchar - The file descriptor indicate the charater c
+ * @c: The character to inscript
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c)
 {
