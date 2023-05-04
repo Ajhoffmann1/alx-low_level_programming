@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	for (leidy = 63; leidy >= 0; leidy--)
 	{
-		new = n >> leiady;
+		new = n >> leidy;
 		if (new & 1)
 		{
 			_putchar('1');
