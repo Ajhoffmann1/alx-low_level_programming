@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 			h++;
 	}
 	l = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	ss = write(l, texy_content, h);
+	ss = write(l, text_content, h);
 	if (l == -1 || ss == -1)
 		return (-1);
 	close(l);
