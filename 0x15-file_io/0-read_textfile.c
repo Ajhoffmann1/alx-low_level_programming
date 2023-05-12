@@ -1,5 +1,5 @@
 #include "main.h"
-#include "stdlib.h>
+#include <stdlib.h>
 
 /**
  * read_textfile - The STANDARDOUTPUT print a text and study a text file.
@@ -11,7 +11,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *bb;
+	char *ss;
 	ssize_t l;
 	ssize_t e;
 	ssize_t o;
@@ -20,9 +20,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (l == -1)
 		return (0);
 	bb = malloc(sizeof(char) * letters);
-	o = read(l, bb, letters);
-	e = write(STDOUT_FILENO, bb,o);
-	free(bb);
+	o = read(l, ss, letters);
+	e = write(STDOUT_FILENO, ss, o);
+	free(ss);
 	close(l);
 	return (e);
 }
