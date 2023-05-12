@@ -1,6 +1,5 @@
 #include "main.h"
-#include <stdib.h>
-#include <fontl.h>
+#include <stdio.h>
 
 /**
  * create_file - A file is created.
@@ -18,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content != NULL)
 	{
-		for (y = 0; text_content[h];)
+		for (h = 0; text_content[h];)
 			h++;
 	}
 	l = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
