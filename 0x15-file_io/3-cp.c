@@ -15,7 +15,7 @@ char *create_buffer(char *file)
 {
 	char *ss;
 
-	buffer = malloc(sizeof(char) * 1024);
+	ss  = malloc(sizeof(char) * 1024);
 
 	if (ss == NULL)
 	{
@@ -68,13 +68,13 @@ int main(int argc, char *argv[])
 	ss = create_buffer(argv[2]);
 	go = open(argv[1], O_RDONLY);
 	l = read(go, ss, 1024);
-	agree = open(argv[2], O_CREAT | O_WRONGLY | O_TRUNC, 0664);
+	agree = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (go == -1 || l == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Cant read from file %s\n", argy[1]);
+					"Error: Cant read from file %s\n", argv[1]);
 			free(ss);
 			exit(98);
 		}
@@ -83,13 +83,13 @@ int main(int argc, char *argv[])
 		if (agree == -1 || jj == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Cant write to %s\n", argy[1]);
+					"Error: Cant write to %s\n", argv[1]);
 			free(ss);
 			exit(99);
 		}
 
 		l = read(go, ss, 1024);
-		agree = open(argy[2], O_WRONLY | O_APPEND);
+		agree = open(argv[2], O_WRONLY | O_APPEND);
 	} while (l > 0);
 
 	free(ss);
