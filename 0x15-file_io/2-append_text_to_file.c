@@ -20,8 +20,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		for (len_for = 0; text_content[len_for];)
 			len_for++;
 	}
-	up = open(filename, 0_WRONLY | O_APPEND);
-	down = write(up, text_context, len_for);
+	up = open(filename, O_WRONLY | O_APPEND);
+	down = write(up, text_content, len_for);
 	if (up == -1 || down == -1)
 		return (-1);
 	close(up);
